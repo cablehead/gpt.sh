@@ -116,7 +116,7 @@ exit code: 0
 ```
 
 If you think a response lacks a certain "je ne sais quoi", you can give them a
-boost with the `-b` flag. This selects gpt-4, instead of the default
+boost with the `-b` flag. This selects `gpt-4`, instead of the default
 `gpt-3.5-turbo` model:
 
 ```bash
