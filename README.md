@@ -80,7 +80,7 @@ exit code: 0
 
 To view the current full chat thread so far:
 
-```bash
+```
 % gpt view -
 ## 039LX8L5PMS9U0JYTXFDTV1M0 :: user ::
 
@@ -166,6 +166,7 @@ When working on source code, a common pattern is to pipe to
 then pipe that to the source file being modified.
 
 ```bash
+% cat src/main.rs | gpt init -b --fence "This is our Rust program so far. Update to..."
 % gpt content - | vipe > src/main.rs
 ```
 
