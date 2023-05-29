@@ -48,7 +48,7 @@ path to store this working session. I usually start a new session for each
 task.
 
 ```bash
-alias gpt="$(realpath ./gpt.sh $(realpath ./stream)"
+alias gpt="$(realpath ./gpt.sh) $(realpath ./stream)"
 ```
 
 Use `init` to start a thread. Note `init` (and `continue`) read from STDIN. You
