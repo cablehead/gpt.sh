@@ -30,7 +30,7 @@ seed() {
 }
 
 # @cmd Start a new chat thread
-# @flag -b --boost  Use gpt-4 (default is gpt-3.5-turbo)
+# @flag -b --boost  Use gpt-4-0613 (default is gpt-3.5-turbo-0613)
 # @option --max-tokens=1000
 # @option -f --fence <MESSAGE>
 init() {
@@ -57,7 +57,7 @@ content() {
 
 # @cmd Continue a chat thread
 # @arg arg2! <ID>
-# @flag -b --boost  Use gpt-4 (default is gpt-3.5-turbo)
+# @flag -b --boost  Use gpt-4-0613 (default is gpt-3.5-turbo-0613)
 # @option --max-tokens=1000
 continue() {
     XS="xs $(realpath "$1")"
@@ -74,16 +74,16 @@ continue() {
 
 # @cmd Trigger a request for a given node
 # @arg arg2! <ID>
-# @flag -b --boost  Use gpt-4 (default is gpt-3.5-turbo)
+# @flag -b --boost  Use gpt-4-0613 (default is gpt-3.5-turbo-0613)
 # @option --max-tokens=1000
 trigger() {
     XS="xs $(realpath "$1")"
     ID="$(_id "$1" "$2")"
     CONTENT=""
 
-    MODEL="gpt-3.5-turbo"
+    MODEL="gpt-3.5-turbo-0613"
     if [[ -v argc_boost ]]; then
-        MODEL="gpt-4"
+        MODEL="gpt-4-0613"
     fi
 
     _gen_call_meta() {
